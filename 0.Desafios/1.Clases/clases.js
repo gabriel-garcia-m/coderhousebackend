@@ -8,8 +8,11 @@ class Usuario {
 
   addBook(author, title) {
     this.libros.push({ autor: author, nombre: title });
-    const names = this.libros.map(getBookNames);
-    function getBookNames(item) {
+  }
+
+  getBookNames() {
+    const names = this.libros.map(getOnlyNames);
+    function getOnlyNames(item) {
       return [item.nombre].join(",");
     }
     return names;
@@ -21,11 +24,11 @@ class Usuario {
 
   addMascota(mascota) {
     this.mascotas.push(mascota);
-    const countMascota = () => {
-      return this.mascotas.length;
-    };
-    return countMascota();
   }
+
+  countMascota = () => {
+    return this.mascotas.length;
+  };
 }
 
 const ejecuta = () => {
@@ -36,8 +39,10 @@ const ejecuta = () => {
     ["Nikki", "Gordon"]
   );
   console.log("Funcion getFullName", usuario1.getFullName());
-  console.log("Funcion addMascota", usuario1.addMascota("Pancho"));
-  console.log("Funcion addBook", usuario1.addBook("PK Dick", "Ubik"));
+  usuario1.addMascota("Pancho");
+  console.log("Funcion countMascota", usuario1.countMascota());
+  usuario1.addBook("PK Dick", "Ubik");
+  console.log("Funcion getBookNames", usuario1.getBookNames());
 };
 
 ejecuta();
