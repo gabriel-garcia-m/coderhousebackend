@@ -3,9 +3,9 @@ const c = new Contenedor("productos.txt");
 
 // Quitar comentarios para ejecutar la funcion deseada
 //  c.deleteAll()
-  c.getAll();
+//  c.getAll();
 //  c.deleteById(1);
-//  c.getById(11);
+//  c.getById(1);
 
 const nuevoProd = {
   title: "Monitor",
