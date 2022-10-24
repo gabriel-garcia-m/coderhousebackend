@@ -8,7 +8,7 @@ class Contenedor {
   async getAll() {
     let allProducts = [];
     try {
-      const data = await fs.readFile(this.items, "utf-8");
+      const data = await fs.readFile(this.items, 'utf-8');
       allProducts = JSON.parse(data);
       console.log(
         "Imprimiendo array de objetos - funcion getAll:",
@@ -110,5 +110,7 @@ class Contenedor {
       console.log(`Problema de lectura en archivo: ${error.message}`);
     }
   }
+
+
 }
 module.exports = Contenedor

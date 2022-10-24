@@ -13,4 +13,5 @@ const nuevoProd = {
   thumbnail:
     "https://www.pexels.com/photo/space-gray-iphone-6-on-top-of-laptop-computer-119550/",
 };
-c.save(nuevoProd);
+//  c.save(nuevoProd);
+c.getRandom()
