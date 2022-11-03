@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío API RESTful</title>
+</head>
+<body>
+
+    <h1>Bienvenidx a la sección de alta de productos</h1>
+  
+    <h2>Ingresa tu Producto</h2>
+    <form action="/api/productos" method="post" name="productos">
+      Título: <input type="text" name="title" required><br>
+      Precio: <input type="text" name="price" required><br>
+      URL: <input type="text" name="thumbnail" required><br>
+      <button>Agregar Producto</button>
+    </form>
+<hr>
+    <h2>Actualiza tu Producto</h2>
+    <form action="/api/productos" method="post" name="productosUpdate" enctype="application/x-www-form-urlencoded" >
+        <input type="hidden" name="_method" value="PUT">
+      Título: <input type="text" name="title" ><br>
+      Precio: <input type="text" name="price" ><br>
+      URL: <input type="text" name="thumbnail" ><br>
+      <button type="submit">Actualizar Producto</button>
+    </form>
+
+  </body>
+</html>
