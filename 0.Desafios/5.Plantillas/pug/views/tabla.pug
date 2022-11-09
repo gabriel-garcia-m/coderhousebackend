@@ -1,0 +1,18 @@
+extends formulario.pug 
+block tabla
+    div 
+        if(prodTemp.length>0)
+            div(class="table-responsive")
+                table(class="table table-dark")
+                    tr(style={color: 'greenyellow'})
+                        th='Nombre'
+                        th='Precio'
+                        th='Foto'
+                    each val in prodTemp
+                        tr
+                            td=val.title
+                            td=val.price
+                            td
+                                img(height="80" width="80" src=val.thumbnail)
+        else
+            h3(class="alert alert-danger")='No se encontraron productos'

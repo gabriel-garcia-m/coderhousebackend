@@ -1,0 +1,68 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <title>Productos Handlebars</title>
+  </head>
+  <body>
+
+    <div class="container mt-3">
+      <div class="jumbotron">
+
+        <h1 style="color:darkolivegreen;">Ingrese Producto</h1>
+        <br />
+
+        <form action="/productos" method="post" name="productos">
+
+          <div class="form-group">
+            <label for="title"><b>Nombre</b></label>
+            <input
+              type="text"
+              placeholder="Computadora"
+              id="title"
+              name="title"
+              class="form-control"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="price"><b>Precio</b></label>
+            <input
+              type="number"
+              placeholder="999"
+              id="price"
+              name="price"
+              class="form-control"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="thumbnail"><b>Foto URL</b></label>
+            <input
+              type="text"
+              placeholder="Foto"
+              id="thumbnail"
+              name="thumbnail"
+              class="form-control"
+              required
+            />
+          </div>
+
+          <button>Enviar</button>
+
+        </form>
+        {{{body}}}
+      </div>
+    </div>
+
+  </body>
+</html>
