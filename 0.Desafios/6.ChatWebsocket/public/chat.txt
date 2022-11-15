@@ -1,0 +1,17 @@
+[
+  {
+    "email": "papi@papi.com",
+    "texto": "Simple chatbox template for Bootstrap, you can use it as a popup chat window on your website or even create your own chatbot based on this UI.",
+    "date": "15/11/2022 4:44:44 PM"
+  },
+  {
+    "email": "papi@papi.com",
+    "texto": "hi",
+    "date": "15/11/2022 4:44:59 PM"
+  },
+  {
+    "email": "miau@miau.com",
+    "texto": "Jajaja",
+    "date": "15/11/2022 4:45:18 PM"
+  }
+]
