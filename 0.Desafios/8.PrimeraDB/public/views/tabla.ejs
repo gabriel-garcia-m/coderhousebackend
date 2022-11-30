@@ -1,0 +1,24 @@
+<h2 style="color:darkred;">Vista de Productos</h2>
+
+<% if(prods.length > 0) { %>
+  <div class="table-responsive">
+    <table class="table table-dark">
+      <tr style="color: greenyellow;">
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Codigo</th>
+        <th>Imagen</th>
+      </tr>
+      <% for (const prod of prods) {%>
+      <tr>
+        <td><%=prod.nombre%></td>
+        <td><%=prod.precio%></td>
+        <td><%=prod.codigo%></td>
+        <td><img height="80" width="80" src= <%=prod.imagen%> > </td>
+      </tr>
+      <%};%>
+    </table>
+  </div>
+<%}else{%>
+  <h3 class="alert alert-danger">No se encontraron productos</h3>
+<%};%>
