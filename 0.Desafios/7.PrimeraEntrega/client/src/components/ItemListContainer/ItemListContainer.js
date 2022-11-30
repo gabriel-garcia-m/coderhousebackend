@@ -48,7 +48,7 @@ function ItemListContainer({ greeting }) {
       //   setItems(productos);
       // }
 
-      const response = await fetch("/react");
+      const response = await fetch("/productos/react");
       const body = await response.json();
       console.log("Print body de callBackend", body);
       const productos = body.express.map((prod) => {

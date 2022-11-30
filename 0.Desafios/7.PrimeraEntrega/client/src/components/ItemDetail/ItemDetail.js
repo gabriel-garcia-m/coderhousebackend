@@ -35,7 +35,7 @@ const ItemDetail = ({ item }) => {
       
       <button className='card button' onClick={() => {
         alert('Producto eliminado', item.nombre)
-        fetch(`/${item.id}`, { method: 'DELETE' })
+        fetch(`/productos/${item.id}`, { method: 'DELETE' })
         routeChange()
       }}>Eliminar</button>
       

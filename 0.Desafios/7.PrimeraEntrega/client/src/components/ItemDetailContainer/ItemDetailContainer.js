@@ -24,7 +24,7 @@ function ItemDetailContainer() {
     const getData = async () => {
       const prod = []
       console.log('imprimo id', productId)
-      const response = await fetch(`/${productId}`);
+      const response = await fetch(`/productos/${productId}`);
       const body = await response.json();
       const productos = body.ResultadoID.map((prod) => {
         const newProduct = {

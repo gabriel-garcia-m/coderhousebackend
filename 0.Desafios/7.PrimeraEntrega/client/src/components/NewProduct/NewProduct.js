@@ -28,7 +28,7 @@ class NewProduct extends React.Component {
     this.prod = producto;
     console.log("Deja veo this.prod", this.prod);
     alert(`Producto agregado ${this.prod.nombre}`)
-    fetch("/", {
+    fetch("/productos/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(this.prod),

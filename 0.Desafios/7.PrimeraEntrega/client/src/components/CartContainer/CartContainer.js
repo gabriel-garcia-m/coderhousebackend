@@ -34,6 +34,37 @@ export const CartContainer = () => {
     });
   };
 
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const order = {
+      buyer: {
+        name: event.target[0].value,
+        phone: event.target[1].value,
+        email: event.target[2].value,
+      },
+      items: productCartList,
+      total: getPrecioTotal(),
+      date: getDate(),
+    };
+
+    console.log("Deja veo order", order);
+    alert(`Carrito agregado ${order.buyer.name}`)
+    fetch('/reactcarrito', {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(order),
+    });
+    // const body = response.json();
+    console.log('verifico total', order.total)
+    setIdOrder(order.total);
+    clearCart();
+    // alert(`The name you entered was: ${descripcion}`);
+  };
+
+
+
+
   const getDate = () => {
     const today = new Date();
     const date =
@@ -70,8 +101,8 @@ export const CartContainer = () => {
   };
   return (
     <div className="Cart-Container">
-      {idOrder.length > 0 ? (
-        <p className="title" style={{textAlign:'center'}}>Tu orden ha sido creada, con el siguiente ID: {idOrder}</p>
+      {idOrder.length != "" ? (
+        <p className="title" style={{textAlign:'center'}}>Tu orden ha sido creada, con el siguiente Total: $ {idOrder}</p>
         
       ) : productCartList.length > 0 ? (
         <div>
@@ -123,7 +154,7 @@ export const CartContainer = () => {
           </p>
           <>
             <div>
-              <form onSubmit={enviarOrden} className="formulario">
+              <form onSubmit={handleSubmit} className="formulario">
                 <label>Nombre:</label>
                 <input type="text"></input>
                 <label>Telefono:</label>
