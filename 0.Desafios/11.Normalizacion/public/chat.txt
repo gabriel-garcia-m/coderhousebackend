@@ -1,0 +1,14 @@
+[
+  {
+    "author": {
+      "correo": "42195mx@pm.me",
+      "nombre": "Gabriel",
+      "apellido": "Garcia Mondragon",
+      "edad": "11",
+      "alias": "papi",
+      "avatar": "https://cdn1.iconfinder.com/data/icons/summer-holiday-sticker/512/Beach-512.png"
+    },
+    "texto": "Mundial 2022",
+    "date": "21/12/2022 9:17:40 PM"
+  }
+]
